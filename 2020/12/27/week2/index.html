@@ -14,6 +14,7 @@
 <meta property="og:site_name" content="blackh1">
 <meta property="og:description" content="XCTF_MISC">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blackh1.github.io/image/week2_1_1.png">
 <meta property="og:image" content="https://blackh1.github.io/image/week2_2_1.png">
 <meta property="og:image" content="https://blackh1.github.io/image/week2_2_2.png">
 <meta property="og:image" content="https://blackh1.github.io/image/week2_2_3.png">
@@ -23,10 +24,10 @@
 <meta property="og:image" content="https://blackh1.github.io/image/week2_3_3.png">
 <meta property="og:image" content="https://blackh1.github.io/image/week2_3_4.png">
 <meta property="article:published_time" content="2020-12-27T13:33:16.000Z">
-<meta property="article:modified_time" content="2020-12-27T14:50:35.955Z">
+<meta property="article:modified_time" content="2020-12-27T14:54:12.678Z">
 <meta property="article:author" content="blackh1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blackh1.github.io/image/week2_2_1.png">
+<meta name="twitter:image" content="https://blackh1.github.io/image/week2_1_1.png">
   
     <link rel="alternate" href="/atom.xml" title="blackh1" type="application/atom+xml">
   
@@ -99,7 +100,7 @@
       
         <h2 id="XCTF-MISC"><a href="#XCTF-MISC" class="headerlink" title="XCTF_MISC"></a>XCTF_MISC</h2><a id="more"></a>
 <p>###题目一<br>菜狗为了打败菜猫，学了一套如来十三掌。</p>
-<p>下载附件，打开发现是一个txt文档，但是解压时发现有密码，经过百度查询后得到以下信息。<br>一开始打开附件解压提示说要密码，用winhex打开，找到压缩源文件目录区：<br>50 4B 01 02：目录中文件文件头标记<br>3F 00：压缩使用的 pkware 版本<br>14 00：解压文件所需 pkware 版本<br>00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09<br>00打开就会提示有密码了）<br>压缩源文件目录结束标志 ：50<br>4B 05 06：目录结束标记<br>把09 00改写成00 00就可以成功解压了使用WinHex打开。<br>解压打开txt文档后发现是一长串的类似base64编码的字符串，经过尝试发现无法使用base64解码，推测是base64隐写，写相关脚本得出flag。<br>python脚本如下：<br>def inttobin(a, n):<br>    ret = bin(a)[2:]<br>    while len(ret) &lt; n:<br>        ret = ‘0’ + ret<br>    return ret<br>table = ‘ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/‘<br>tmpbin = ‘’<br>res = ‘’<br>for line in x.split(‘\n’):#(x是所有的base64编码)<br>    if line[-1] == ‘=’:<br>        if line[-2] == ‘=’:<br>            tmpbin += inttobin(table.index(line[-3]), 6)[2:]<br>        else:<br>            tmpbin += inttobin(table.index(line[-2]), 6)[4:]<br>quotient = len(tmpbin)//8<br>for i in range(quotient):<br>    res += chr(int(tmpbin[8<em>i:8</em>i+8], 2))<br>print(“flag{0}”.format(‘{‘+res+’}’))</p>
+<p>下载附件，打开发现是一个txt文档，但是解压时发现有密码，经过百度查询后得到以下信息。<br>一开始打开附件解压提示说要密码，用winhex打开，找到压缩源文件目录区：<br>50 4B 01 02：目录中文件文件头标记<br>3F 00：压缩使用的 pkware 版本<br>14 00：解压文件所需 pkware 版本<br>00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09<br>00打开就会提示有密码了）<br>压缩源文件目录结束标志 ：50<br>4B 05 06：目录结束标记<br>把09 00改写成00 00就可以成功解压了使用WinHex打开。<br>解压打开txt文档后发现是一长串的类似base64编码的字符串，经过尝试发现无法使用base64解码，推测是base64隐写，写相关脚本得出flag。<br>python脚本如下：<br><img src="/image/week2_1_1.png" alt="image"></p>
 <p>最终得到flag为：flag{Base_sixty_four_point_five}</p>
 <p>###题目二<br>今天是菜狗的生日，他收到了一个linux系统光盘。</p>
 <p>下载附件后使用WinHex打开，发现里面有flag.txt文件<br><img src="/image/week2_2_1.png" alt="image"><br><img src="/image/week2_2_2.png" alt="image"><br>更改文件拓展名为zip，使用7-zip打开，进入目录并打开flag.txt发现是base64编码，<br><img src="/image/week2_2_3.png" alt="image"><br>解码后得到flag。<br><img src="/image/week2_2_4.png" alt="image"></p>
@@ -109,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blackh1.github.io/2020/12/27/week2/" data-id="ckj792nrf0001rkv3eotr3oab" class="article-share-link">Share</a>
+      <a data-url="https://blackh1.github.io/2020/12/27/week2/" data-id="ckj7976hp0001e0v362ascxr5" class="article-share-link">Share</a>
       
       
     </footer>
