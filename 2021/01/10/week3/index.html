@@ -5,29 +5,26 @@
   
 
   
-  <title>week2 | blackh1</title>
+  <title>week3 | blackh1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="XCTF_MISC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="week2">
-<meta property="og:url" content="https://blackh1.github.io/2020/12/27/week2/index.html">
+<meta property="og:title" content="week3">
+<meta property="og:url" content="https://blackh1.github.io/2021/01/10/week3/index.html">
 <meta property="og:site_name" content="blackh1">
 <meta property="og:description" content="XCTF_MISC">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_1_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_2_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_2_2.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_2_3.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_2_4.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_3_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_3_2.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_3_3.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week2_3_4.png">
-<meta property="article:published_time" content="2020-12-27T13:33:16.000Z">
-<meta property="article:modified_time" content="2020-12-27T14:54:12.678Z">
+<meta property="og:image" content="https://blackh1.github.io/image/week3_1_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week3_2_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week3_2_2.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week3_2_3.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week3_2_4.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week3_3_1.png">
+<meta property="article:published_time" content="2021-01-10T11:36:47.000Z">
+<meta property="article:modified_time" content="2021-01-10T12:36:27.623Z">
 <meta property="article:author" content="blackh1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blackh1.github.io/image/week2_1_1.png">
+<meta name="twitter:image" content="https://blackh1.github.io/image/week3_1_1.png">
   
     <link rel="alternate" href="/atom.xml" title="blackh1" type="application/atom+xml">
   
@@ -76,10 +73,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-week2" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-week3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/12/27/week2/" class="article-date">
-  <time datetime="2020-12-27T13:33:16.000Z" itemprop="datePublished">2020-12-27</time>
+    <a href="/2021/01/10/week3/" class="article-date">
+  <time datetime="2021-01-10T11:36:47.000Z" itemprop="datePublished">2021-01-10</time>
 </a>
     
   </div>
@@ -90,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      week2
+      week3
     </h1>
   
 
@@ -99,18 +96,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="XCTF-MISC"><a href="#XCTF-MISC" class="headerlink" title="XCTF_MISC"></a>XCTF_MISC</h2><a id="more"></a>
-<p>###题目一<br>菜狗为了打败菜猫，学了一套如来十三掌。</p>
-<p>下载附件，打开发现是一个txt文档，但是解压时发现有密码，经过百度查询后得到以下信息。<br>一开始打开附件解压提示说要密码，用winhex打开，找到压缩源文件目录区：<br>50 4B 01 02：目录中文件文件头标记<br>3F 00：压缩使用的 pkware 版本<br>14 00：解压文件所需 pkware 版本<br>00 00：全局方式位标记（有无加密，这个更改这里进行伪加密，改为09<br>00打开就会提示有密码了）<br>压缩源文件目录结束标志 ：50<br>4B 05 06：目录结束标记<br>把09 00改写成00 00就可以成功解压了使用WinHex打开。<br>解压打开txt文档后发现是一长串的类似base64编码的字符串，经过尝试发现无法使用base64解码，推测是base64隐写，写相关脚本得出flag。<br>python脚本如下：<br><img src="/image/week2_1_1.png" alt="image"></p>
-<p>最终得到flag为：flag{Base_sixty_four_point_five}</p>
-<p>###题目二<br>今天是菜狗的生日，他收到了一个linux系统光盘。</p>
-<p>下载附件后使用WinHex打开，发现里面有flag.txt文件<br><img src="/image/week2_2_1.png" alt="image"><br><img src="/image/week2_2_2.png" alt="image"><br>更改文件拓展名为zip，使用7-zip打开，进入目录并打开flag.txt发现是base64编码，<br><img src="/image/week2_2_3.png" alt="image"><br>解码后得到flag。<br><img src="/image/week2_2_4.png" alt="image"></p>
-<p>###题目三<br>菜狗决定用菜刀和菜鸡决一死战。</p>
-<p>拿到文件是一个数据流量包，首先使用foremost进行分解，发现是一个需要输入密码的压缩包，里面是一个flag。<br><img src="/image/week2_3_1.png" alt="iamge"><br>之后使用wireshark进行分析，http contains flag进行分析发现1150处含有flag，对其进行TCP流追踪，得到一串编码。<br><img src="/image/week2_3_2.png" alt="image"><br>经过百度查询后知道jpg格式的文件是以FFD8FF开头，以FFD9结尾。将上面内容复制到WinHex中，保存为jpg文件，打开后发现是密码。<br><img src="/image/week2_3_3.png" alt="image"><br>将密码输入压缩文件中，得到flag。<br><img src="/image/week2_3_4.png" alt="image"></p>
+<p>###题目一<br>黑客通过wireshark抓到管理员登陆网站的一段流量包（管理员的密码即是答案)。 flag提交形式为flag{XXXX}</p>
+<p>下载附件，使用wireshark打开。由题目得知是管理员登录网站的流量包，寻找管理员提交的密码，所以筛选http以post提交的数据。<br><img src="/image/week3_1_1.png" alt="image"><br>查找发现flag为ffb7567a1d4f4abdffdb54e022f8facd，提交后验证为正确。</p>
+<p>###题目二<br>Aesop_secret</p>
+<p>下载附件后发现是一个gif文件，放入Stegsolve分析一下，一共九张图片，经过拼合后是<br><img src="/image/week3_2_1.png" alt="image"><br>猜测是一个密钥。将该gif放入Winhex打开查看发现文件最后是一段加密过的文字。<br><img src="/image/week3_2_2.png" alt="image"><br>由题目名称猜测是aes加密，密钥则为刚才分离出来的图片ISCC，第一次解密后发现文本长度变短，但仍然不是flag，为U2FsdGVkX18OvTUlZubDnmvk2lSAkb8Jt4Zv6UWpE7Xb43f8uzeFRUKGMo6QaaNFHZriDDV0EQ/qt38Tw73tbQ==<br><img src="/image/week3_2_3.png" alt="image"><br>再次解密后得到flag<br><img src="/image/week3_2_4.png" alt="image"><br>flag为flag{DugUpADiamondADeepDarkMine}。</p>
+<p>###题目三<br>房屋为什么会倒立！是重力反转了吗？</p>
+<p>下载附件后发现是一个png图片，放入Stegsolve进行分析，首先推测是图片LSB隐写，在文件开头发现了与题目来源相同的文字。<br><img src="/image/week3_3_1.png" alt="image"><br>初步猜测为flag，验证后发现错误。再根据题目和附件的名称，猜测将此段文字反转，经过验证为flag。<br>flag为flag{9102_cCsI}。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blackh1.github.io/2020/12/27/week2/" data-id="ckjr4geba0000iwv31rfieslt" class="article-share-link">Share</a>
+      <a data-url="https://blackh1.github.io/2021/01/10/week3/" data-id="ckjr4gecf0001iwv3550d9p7b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -119,19 +115,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/10/week3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          week3
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/20/week1/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/12/27/week2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">week1</div>
+      <div class="article-nav-title">week2</div>
     </a>
   
 </nav>
