@@ -5,26 +5,28 @@
   
 
   
-  <title>week4 | blackh1</title>
+  <title>week5 | blackh1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="##XCTF_MISC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="week4">
-<meta property="og:url" content="https://blackh1.github.io/2021/01/17/week4/index.html">
+<meta property="og:title" content="week5">
+<meta property="og:url" content="https://blackh1.github.io/2021/01/24/week5/index.html">
 <meta property="og:site_name" content="blackh1">
 <meta property="og:description" content="##XCTF_MISC">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blackh1.github.io/image/week4_1_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week4_1_2.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week4_1_3.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week4_1_4.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week4_3_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week4_3_2.png">
-<meta property="article:published_time" content="2021-01-17T13:14:54.000Z">
-<meta property="article:modified_time" content="2021-01-24T11:47:53.027Z">
+<meta property="og:image" content="https://blackh1.github.io/image/week5_1_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week5_1_2.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week5_1_3.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week5_2_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week5_2_2.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week5_3_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week5_3_2.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week5_3_3.png">
+<meta property="article:published_time" content="2021-01-24T11:38:03.000Z">
+<meta property="article:modified_time" content="2021-01-24T13:25:17.029Z">
 <meta property="article:author" content="blackh1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blackh1.github.io/image/week4_1_1.png">
+<meta name="twitter:image" content="https://blackh1.github.io/image/week5_1_1.png">
   
     <link rel="alternate" href="/atom.xml" title="blackh1" type="application/atom+xml">
   
@@ -73,10 +75,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-week4" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-week5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/01/17/week4/" class="article-date">
-  <time datetime="2021-01-17T13:14:54.000Z" itemprop="datePublished">2021-01-17</time>
+    <a href="/2021/01/24/week5/" class="article-date">
+  <time datetime="2021-01-24T11:38:03.000Z" itemprop="datePublished">2021-01-24</time>
 </a>
     
   </div>
@@ -87,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      week4
+      week5
     </h1>
   
 
@@ -97,18 +99,17 @@
       
         <p>##XCTF_MISC</p>
 <a id="more"></a>
-<p>###题目一<br>a_good_idea</p>
-<p>下载附件后发现是一个压缩包，解压发现是一张图片，使用StegSolve打开发现并没有什么隐写，接着使用WinHex打开发现有其他文件。<br><img src="/image/week4_1_1.png" alt="image"><br>之后更改文件后缀名解压缩发现有三个文件，hint告诉我们找像素的差别。<br><img src="/image/week4_1_2.png" alt="image"><br>接着用StegSolve打开发现一堆红色的点，经过许久的猜测可能是二维码，但是需要经过加工。<br><img src="/image/week4_1_3.png" alt="image"><br>经过P图工具调高曝光度后发现是一张二维码。<br><img src="/image/week4_1_4.png" alt="image"><br>识别后得到flag为NCTF{m1sc_1s_very_funny!!!}</p>
-<p>###题目二<br>这是我能想到的最基础的图片隐写术。</p>
-<p>下载附件发现是一个图片，放入StegSolve分析，发现并没有什么LSB隐写，之后放入WinHex中打开，得到flag为steganoI。</p>
-<p>###题目三<br>János-the-Ripper</p>
-<p>下载附件后发现是一个压缩包，解压后将文件使用WinHex打开，发现里面有flag.txt<br><img src="/image/week4_3_1.png" alt="image"><br>更改后缀名尝试解压发现有密码，对密码进行爆破，得到密码为fish，解压后可以得到flag<br><img src="/image/week4_3_2.png" alt="image"><br>flag为flag{ev3n::y0u::bru7us?!}</p>
-<p>本周的题可能有一点水。。。下周多做一些。</p>
+<p>###题目一<br>找到FLAG</p>
+<p>下载附件后发现是一个压缩包，解压后将文件放入WinHex打开，发现开头使pic2.jpg。<br><img src="/image/week5_1_1.png" alt="image"><br>看16进制开头发现是jpg文件，之后查找压缩文件结尾，发下下面还有一个jpg文件。<br><img src="/image/week5_1_2.png" alt="image"><br>更改文件后缀名后解压文件，将两张图片放入Stegsolve进行对比，最终得到flag。<br><img src="/image/week5_1_3.png" alt="image"><br>flag为AZADI TOWER<br>注意空格。</p>
+<p>###题目二<br>something_in_image</p>
+<p>下载附件后发现是一个压缩包，之后将其解压后放入WinHex打开，发现里面有一堆0。<br><img src="/image/week5_2_1.png" alt="image"><br>首先进行查找flag，结果一下子找到了flag。<br><img src="/image/week5_2_2.png" alt="image"><br>flag为Flag{yc4pl0fvjs2k1t7T}</p>
+<p>###题目三<br>01081522291516170310172431-050607132027262728-0102030209162330-02091623020310090910172423-02010814222930-0605041118252627-0203040310172431-0102030108152229151617-04050604111825181920-0108152229303124171003-261912052028211407-04051213192625</p>
+<p>下载附件后打开是一个pdf文件，然后放入WinHex打开并没有发现什么，之后分析题目描述的一串数字，发现可以通过横杠分开，得到一堆似乎有规律的数字。<br><img src="/image/week5_3_1.png" alt="image"><br>之后发现数字都很小，而且小于31，像是日期，所以将其分隔开。<br><img src="/image/week5_3_2.png" alt="image"><br>之后在日历上将对应的日期连接起来，得到flag。<br><img src="/image/week5_3_3.png" alt="image"><br>flag为HITB{CTFFUN}<br>此题为日历的隐写法，比较有意思。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blackh1.github.io/2021/01/17/week4/" data-id="ckkb6dyj30001x4v37gy9165y" class="article-share-link">Share</a>
+      <a data-url="https://blackh1.github.io/2021/01/24/week5/" data-id="ckkb6dyj60002x4v3e4j62b56" class="article-share-link">Share</a>
       
       
     </footer>
@@ -117,19 +118,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/24/week5/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          week5
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/10/week3/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/01/17/week4/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">week3</div>
+      <div class="article-nav-title">week4</div>
     </a>
   
 </nav>
