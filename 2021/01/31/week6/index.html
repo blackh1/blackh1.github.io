@@ -5,28 +5,28 @@
   
 
   
-  <title>week5 | blackh1</title>
+  <title>week6 | blackh1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="##XCTF_MISC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="week5">
-<meta property="og:url" content="https://blackh1.github.io/2021/01/24/week5/index.html">
+<meta property="og:title" content="week6">
+<meta property="og:url" content="https://blackh1.github.io/2021/01/31/week6/index.html">
 <meta property="og:site_name" content="blackh1">
 <meta property="og:description" content="##XCTF_MISC">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blackh1.github.io/image/week5_1_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week5_1_2.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week5_1_3.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week5_2_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week5_2_2.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week5_3_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week5_3_2.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week5_3_3.png">
-<meta property="article:published_time" content="2021-01-24T11:38:03.000Z">
-<meta property="article:modified_time" content="2021-01-24T13:25:17.029Z">
+<meta property="og:image" content="https://blackh1.github.io/image/week6_1_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week6_1_2.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week6_1_3.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week6_1_4.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week6_2_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week6_3_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week6_3_2.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week6_3_3.png">
+<meta property="article:published_time" content="2021-01-31T10:37:44.000Z">
+<meta property="article:modified_time" content="2021-01-31T13:12:02.569Z">
 <meta property="article:author" content="blackh1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blackh1.github.io/image/week5_1_1.png">
+<meta name="twitter:image" content="https://blackh1.github.io/image/week6_1_1.png">
   
     <link rel="alternate" href="/atom.xml" title="blackh1" type="application/atom+xml">
   
@@ -75,10 +75,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-week5" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-week6" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/01/24/week5/" class="article-date">
-  <time datetime="2021-01-24T11:38:03.000Z" itemprop="datePublished">2021-01-24</time>
+    <a href="/2021/01/31/week6/" class="article-date">
+  <time datetime="2021-01-31T10:37:44.000Z" itemprop="datePublished">2021-01-31</time>
 </a>
     
   </div>
@@ -89,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      week5
+      week6
     </h1>
   
 
@@ -99,17 +99,17 @@
       
         <p>##XCTF_MISC</p>
 <a id="more"></a>
-<p>###题目一<br>找到FLAG</p>
-<p>下载附件后发现是一个压缩包，解压后将文件放入WinHex打开，发现开头使pic2.jpg。<br><img src="/image/week5_1_1.png" alt="image"><br>看16进制开头发现是jpg文件，之后查找压缩文件结尾，发下下面还有一个jpg文件。<br><img src="/image/week5_1_2.png" alt="image"><br>更改文件后缀名后解压文件，将两张图片放入Stegsolve进行对比，最终得到flag。<br><img src="/image/week5_1_3.png" alt="image"><br>flag为AZADI TOWER<br>注意空格。</p>
-<p>###题目二<br>something_in_image</p>
-<p>下载附件后发现是一个压缩包，之后将其解压后放入WinHex打开，发现里面有一堆0。<br><img src="/image/week5_2_1.png" alt="image"><br>首先进行查找flag，结果一下子找到了flag。<br><img src="/image/week5_2_2.png" alt="image"><br>flag为Flag{yc4pl0fvjs2k1t7T}</p>
-<p>###题目三<br>01081522291516170310172431-050607132027262728-0102030209162330-02091623020310090910172423-02010814222930-0605041118252627-0203040310172431-0102030108152229151617-04050604111825181920-0108152229303124171003-261912052028211407-04051213192625</p>
-<p>下载附件后打开是一个pdf文件，然后放入WinHex打开并没有发现什么，之后分析题目描述的一串数字，发现可以通过横杠分开，得到一堆似乎有规律的数字。<br><img src="/image/week5_3_1.png" alt="image"><br>之后发现数字都很小，而且小于31，像是日期，所以将其分隔开。<br><img src="/image/week5_3_2.png" alt="image"><br>之后在日历上将对应的日期连接起来，得到flag。<br><img src="/image/week5_3_3.png" alt="image"><br>flag为HITB{CTFFUN}<br>此题为日历的隐写法，比较有意思。</p>
+<p>###题目一<br>Ditf</p>
+<p>下载附件后发现是一个png文件，放入StegSolve查看也没有什么特别的，然后查看该文件比较大，猜测是文件里藏了别的东西，使用foremost进行分离尝试，得到了一个png图片和一个rar压缩包。<br><img src="/image/week6_1_1.png" alt="image"><br>然后尝试解压压缩包，发现需要密码，经过初期的暴力尝试发现有亿点点困难，所以转回查看png文件。<br>经过StegSolve和WinHex多方向尝试并没有发现什么特别的，然后想到了改图像的高度，经过尝试后发现密码。<br><img src="/image/week6_1_2.png" alt="image"><br>然后对该文件进行分析，查找flag，发现没找到，之后查找各种文件后缀，在查找png的时候找到了一个kiss.png的文件，追踪HTTP流后发现下面还有一串字符<br><img src="/image/week6_1_3.png" alt="image"><br>猜测被base64加密过，进行解密后得到flag。<br><img src="/image/week6_1_4.png" alt="image"><br>flag为flag{Oz_4nd_Hir0_lov3_For3ver}</p>
+<p>###题目二<br>Banmabanma</p>
+<p>下载附件后发现是一个压缩包，放入WinHex打开后并没有什么特殊的，然后正常解压出来一张斑马的图片，使用StegSolve和WinHex进行各种分析无果，突然瞅这个斑马特别像条形码，所以识别一下，果然是一个条形码。<br><img src="/image/week6_2_1.png" alt="image"><br>最终得到flag为flag{TENSHINE}<br>识别二维码的网站为：<a target="_blank" rel="noopener" href="https://online-barcode-reader.inliteresearch.com/">https://online-barcode-reader.inliteresearch.com/</a></p>
+<p>###题目三<br>stage1</p>
+<p>下载附件后发现是一张图片，使用StegSolve打开，查看各个信道发现里面有一张二维码<br><img src="/image/week6_3_1.png" alt="image"><br>对二维码进行分析得到一串字符，<br><img src="/image/week6_3_2.png" alt="image"><br>看开头是03F30D0A，经过百度发现是.pyc文件，使用Easy Python Decompiler进行反编译，得到相应的python文件，使用文本编辑打开，复制粘贴运行代码即可得到flag<br><img src="/image/week6_3_3.png" alt="image"><br>flag为AlphaLab，没有flag{}。<br>Easy Python Decompiler网址为<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/easypythondecompiler/">https://sourceforge.net/projects/easypythondecompiler/</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blackh1.github.io/2021/01/24/week5/" data-id="ckkl5zlz400044wv3ddane41a" class="article-share-link">Share</a>
+      <a data-url="https://blackh1.github.io/2021/01/31/week6/" data-id="ckkl5zlz500054wv3860pbdye" class="article-share-link">Share</a>
       
       
     </footer>
@@ -118,19 +118,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/31/week6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          week6
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/17/week4/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/01/24/week5/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">week4</div>
+      <div class="article-nav-title">week5</div>
     </a>
   
 </nav>
