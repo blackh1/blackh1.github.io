@@ -5,26 +5,32 @@
   
 
   
-  <title>week3 | blackh1</title>
+  <title>week8 | blackh1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="XCTF_MISC">
+  <meta name="description" content="##XCTF_MISC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="week3">
-<meta property="og:url" content="https://blackh1.github.io/2021/01/10/week3/index.html">
+<meta property="og:title" content="week8">
+<meta property="og:url" content="https://blackh1.github.io/2021/02/15/week8/index.html">
 <meta property="og:site_name" content="blackh1">
-<meta property="og:description" content="XCTF_MISC">
+<meta property="og:description" content="##XCTF_MISC">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blackh1.github.io/image/week3_1_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week3_2_1.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week3_2_2.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week3_2_3.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week3_2_4.png">
-<meta property="og:image" content="https://blackh1.github.io/image/week3_3_1.png">
-<meta property="article:published_time" content="2021-01-10T11:36:47.000Z">
-<meta property="article:modified_time" content="2021-01-10T12:36:27.623Z">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_1_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_1_2.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_1_3.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_1_4.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_1_5.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_1_6.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_1_7.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_1_8.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_2_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_2_2.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_3_1.png">
+<meta property="og:image" content="https://blackh1.github.io/image/week8_3_2.png">
+<meta property="article:published_time" content="2021-02-15T11:14:51.000Z">
+<meta property="article:modified_time" content="2021-02-15T12:06:37.730Z">
 <meta property="article:author" content="blackh1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blackh1.github.io/image/week3_1_1.png">
+<meta name="twitter:image" content="https://blackh1.github.io/image/week8_1_1.png">
   
     <link rel="alternate" href="/atom.xml" title="blackh1" type="application/atom+xml">
   
@@ -73,10 +79,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-week3" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-week8" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/01/10/week3/" class="article-date">
-  <time datetime="2021-01-10T11:36:47.000Z" itemprop="datePublished">2021-01-10</time>
+    <a href="/2021/02/15/week8/" class="article-date">
+  <time datetime="2021-02-15T11:14:51.000Z" itemprop="datePublished">2021-02-15</time>
 </a>
     
   </div>
@@ -87,7 +93,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      week3
+      week8
     </h1>
   
 
@@ -95,18 +101,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="XCTF-MISC"><a href="#XCTF-MISC" class="headerlink" title="XCTF_MISC"></a>XCTF_MISC</h2><a id="more"></a>
-<p>###题目一<br>黑客通过wireshark抓到管理员登陆网站的一段流量包（管理员的密码即是答案)。 flag提交形式为flag{XXXX}</p>
-<p>下载附件，使用wireshark打开。由题目得知是管理员登录网站的流量包，寻找管理员提交的密码，所以筛选http以post提交的数据。<br><img src="/image/week3_1_1.png" alt="image"><br>查找发现flag为ffb7567a1d4f4abdffdb54e022f8facd，提交后验证为正确。</p>
-<p>###题目二<br>Aesop_secret</p>
-<p>下载附件后发现是一个gif文件，放入Stegsolve分析一下，一共九张图片，经过拼合后是<br><img src="/image/week3_2_1.png" alt="image"><br>猜测是一个密钥。将该gif放入Winhex打开查看发现文件最后是一段加密过的文字。<br><img src="/image/week3_2_2.png" alt="image"><br>由题目名称猜测是aes加密，密钥则为刚才分离出来的图片ISCC，第一次解密后发现文本长度变短，但仍然不是flag，为U2FsdGVkX18OvTUlZubDnmvk2lSAkb8Jt4Zv6UWpE7Xb43f8uzeFRUKGMo6QaaNFHZriDDV0EQ/qt38Tw73tbQ==<br><img src="/image/week3_2_3.png" alt="image"><br>再次解密后得到flag<br><img src="/image/week3_2_4.png" alt="image"><br>flag为flag{DugUpADiamondADeepDarkMine}。</p>
-<p>###题目三<br>房屋为什么会倒立！是重力反转了吗？</p>
-<p>下载附件后发现是一个png图片，放入Stegsolve进行分析，首先推测是图片LSB隐写，在文件开头发现了与题目来源相同的文字。<br><img src="/image/week3_3_1.png" alt="image"><br>初步猜测为flag，验证后发现错误。再根据题目和附件的名称，猜测将此段文字反转，经过验证为flag。<br>flag为flag{9102_cCsI}。</p>
+        <p>##XCTF_MISC</p>
+<a id="more"></a>
+<p>###题目一<br>MISCall</p>
+<p>下载附件后尝试用WinHex打开进行判断，无果。之后放入linux虚拟机里进行文件确认。<br><img src="/image/week8_1_1.png" alt="image"><br>发现该文件是bzip2类型，对其进行重命名并解压。<br><img src="/image/week8_1_2.png" alt="image"><br>发现里面有一个flag.txt文件，打开发现里面什么都没有，是一个假的flag。<br><img src="/image/week8_1_3.png" alt="image"><br>之后结合解压后出现的记录使用命令查看一下git记录，给出了一个最近上传的文件，但是压缩包里并没有。<br><img src="/image/week8_1_4.png" alt="image"><br>查看修改列表，里面有一条记录<br><img src="/image/week8_1_5.png" alt="image"><br>校验一下列表中的存储文件<br><img src="/image/week8_1_6.png" alt="image"><br>之后把上面的文件进行恢复，直接执行git stash apply时会因为有flag.txt而自动停止，所以可以提前删除flag.txt，之后进行恢复就可以了。<br><img src="/image/week8_1_7.png" alt="image"><br>可以得到一个py文件，之后运行一下即可得到flag<br><img src="/image/week8_1_8.png" alt="image"><br>flag为NCN4dd992213ae6b76f27d7340f0dde1222888df4d3。</p>
+<p>###题目二<br>Get-the-key.txt</p>
+<p>下载附件后使用WinHex打开，发现里面有许多的文件，猜测可能为一个压缩包。<br><img src="/image/week8_2_1.png" alt="image"><br>更改后缀打开发现里面就有key.txt,打开发现就是flag。。。。<br><img src="/image/week8_2_2.png" alt="image"><br>flag为SECCON{@]NL7n+-s75FrET]vU=7Z}</p>
+<p>###题目三<br>Reverse-it</p>
+<p>下载附件后使用WinHex打开，查看里面的内容发现并没有什么有特殊的，之后发现文件头时9DFF，这个是JPEG的文件尾，之后查看文件末尾，发现了同样是JPEG的文件头。<br><img src="/image/week8_3_1.png" alt="image"><br>结合题目名称使用py脚本将该文件的16进制完全翻转，再创建一个文件更改为jpg后缀，之后打开即可得到flag。<br><img src="/image/week8_3_2.png" alt="image"><br>flag为SECCON{6in_tex7}</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blackh1.github.io/2021/01/10/week3/" data-id="ckl6j9llj0000vkv30dem909d" class="article-share-link">Share</a>
+      <a data-url="https://blackh1.github.io/2021/02/15/week8/" data-id="ckl6j9lmw0004vkv39yu5bx81" class="article-share-link">Share</a>
       
       
     </footer>
@@ -115,19 +122,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/17/week4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          week4
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/27/week2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/02/08/week7/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">week2</div>
+      <div class="article-nav-title">week7</div>
     </a>
   
 </nav>
